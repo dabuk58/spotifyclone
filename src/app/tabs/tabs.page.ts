@@ -9,6 +9,7 @@ import { IonDatetimeButton, IonTabs } from '@ionic/angular';
 export class TabsPage {
   @ViewChild(IonTabs) tabs!: IonTabs;
   selectedTab: any = '';
+  progress = 42;
 
   constructor() {}
 
