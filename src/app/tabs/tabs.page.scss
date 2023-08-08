@@ -1,5 +1,6 @@
 ion-tab-bar {
     --background: var(--ion-color-medium);
+    opacity: 50%;
 }
 
 ion-tab-button{
@@ -7,18 +8,21 @@ ion-tab-button{
 }
 
 .player{
+    width: 97.5%;
+    margin: auto;
     height: 55px;
     background: var(--ion-color-medium);
     font-family: 'Spotify';
     font-size: medium;
     color: #fff;
+    border-radius: 8px;
 
     img{
         height: 55px;
     }
 
     .progress-bar{
-        width: 100%;
+        width: 98%;
         height: 2px;
         background: #707070;
         
