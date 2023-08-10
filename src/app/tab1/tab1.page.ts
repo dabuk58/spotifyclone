@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+import recentlyPlayed from '../../assets/mockdata/recentlyPlayed.json';
+import heavyRotation from '../../assets/mockdata/heavyRotation.json';
+import jumpBackIn from '../../assets/mockdata/jumpBackIn.json';
+
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -8,5 +13,20 @@ import { Component } from '@angular/core';
 export class Tab1Page {
 
   constructor() {}
+
+  data = [
+    {
+      title: 'Recently played',
+      albums: recentlyPlayed
+    },
+    {
+      title: 'Heavy rotation',
+      albums: heavyRotation
+    },
+    {
+      title: 'Jump back in',
+      albums: jumpBackIn
+    }
+  ];
 
 }
