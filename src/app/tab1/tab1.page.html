@@ -11,17 +11,9 @@
         </ion-button>
       </ion-buttons>
     </ion-col>
-    <swiper-container slides-per-view="2.3" [loop]="true" class="ion-no-padding">
+    <swiper-container slides-per-view="3" [loop]="true" class="swiper-container">
       <swiper-slide *ngFor="let album of entry.albums" tappable (click)="openAlbum()"> 
-        <ion-card class="ion-no-padding">
           <img class="albumImg" [src]="'/assets/images/albums/' + dasherize(album.image) + '.jpg'">
-          <ion-card-header>
-            <ion-card-title></ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <ion-card-title></ion-card-title>
-          </ion-card-content>
-        </ion-card>
       </swiper-slide>
     </swiper-container>
   </ion-row>
