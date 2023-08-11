@@ -3,7 +3,7 @@
     font-family: 'Spotify';
     font-weight: bold;
     margin-left: 20px;
-    margin-bottom: 30px;
+    margin-bottom: -10px;
 }
 
 .center {
@@ -11,4 +11,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+}
+
+.albumImg{
+    height: 140px;
+}
+
+.settings-icon{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+swiper-container{
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

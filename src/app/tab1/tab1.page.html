@@ -1,16 +1,28 @@
 <ion-content>
 
   <ion-row class="ion-no-padding" *ngFor="let entry of data; let isFirst = first;">
-    <ion-col size="9">
-      <h2 class="section-header"> {{ entry.title }} </h2>
+    <ion-col size="9" >
+      <h2 class="section-header ion-no-padding"> {{ entry.title }} </h2>
     </ion-col>
     <ion-col size="3">
       <ion-buttons  class="ion-justify-content-end">
-        <ion-button *ngIf="isFirst" fill="clear" color="light">
+        <ion-button *ngIf="isFirst" fill="clear" color="light" class="settings-icon">
           <ion-icon name="settings-outline" slot="icon-only"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-col>
-    <!-- dodac swiper -->
+    <swiper-container slides-per-view="2.3" [loop]="true" class="ion-no-padding">
+      <swiper-slide *ngFor="let album of entry.albums" tappable (click)="openAlbum()"> 
+        <ion-card class="ion-no-padding">
+          <img class="albumImg" [src]="'/assets/images/albums/' + dasherize(album.image) + '.jpg'">
+          <ion-card-header>
+            <ion-card-title></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title></ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+    </swiper-container>
   </ion-row>
 </ion-content>
