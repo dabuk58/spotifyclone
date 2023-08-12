@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import albums from '../../assets/mockdata/albumsFile/albums.json';
+
 @Component({
   selector: 'app-album',
   templateUrl: './album.page.html',
   styleUrls: ['./album.page.scss'],
 })
 export class AlbumPage implements OnInit {
+  data: any = {};
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -14,11 +17,13 @@ export class AlbumPage implements OnInit {
 
   ngOnInit() {
     const title= this.activatedRoute.snapshot.paramMap.get('title');
-    
-    if(title !== null){
-      const decodedTitle = decodeURIComponent(title);
-      console.log(decodedTitle);
+    const decodedTitle = decodeURIComponent(title!);
+
+    const album = albums.data.find((album) => album.title === decodedTitle);
+
+    if(album) {
+      this.data = album;
+      console.log(album);
     }
   }
-
 }
