@@ -1,0 +1,38 @@
+ion-item{
+    --background: transparent;
+    color: #fff;
+    font-family: 'Spotify';
+
+    p{
+        color:  #949494;
+    }
+}
+
+.album-info{
+    color: #fff;
+    margin-left: 11px;
+    p{
+        font-weight: bold;
+    }
+}
+
+.image-box{
+    position: fixed;
+    z-index: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+}
+
+.main{
+    z-index: 2;
+    background: linear-gradient(var(--custombg),#000);
+}
+
+ion-row{
+    padding-top: 37vh;
+}
+
+ion-content{
+    background: linear-gradient(var(--custombg),#000);
+}

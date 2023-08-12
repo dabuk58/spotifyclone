@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import recentlyPlayed from '../../assets/mockdata/recentlyPlayed.json';
 import heavyRotation from '../../assets/mockdata/heavyRotation.json';
 import jumpBackIn from '../../assets/mockdata/jumpBackIn.json';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,9 @@ import jumpBackIn from '../../assets/mockdata/jumpBackIn.json';
 })
 export class Tab1Page{
 
-  constructor() {}
+  constructor(
+    private router: Router,
+  ) {}
 
 
   data = [
@@ -31,7 +34,9 @@ export class Tab1Page{
   ];
 
   openAlbum(album: any){
-    
+    const titleEscaped = encodeURIComponent(album.title);
+    console.log(titleEscaped);
+    this.router.navigateByUrl(`/tabs/tab1/${titleEscaped}`);
   }
 
   dasherize(x: string){
