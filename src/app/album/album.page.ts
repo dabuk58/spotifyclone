@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import albums from '../../assets/mockdata/albumsFile/albums.json';
+import albums from '../../assets/mockdata/albums/albums.json';
 
 @Component({
   selector: 'app-album',
