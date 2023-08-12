@@ -30,8 +30,8 @@ export class Tab1Page{
     }
   ];
 
-  openAlbum(){
-
+  openAlbum(album: any){
+    
   }
 
   dasherize(x: string){

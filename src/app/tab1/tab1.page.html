@@ -11,9 +11,10 @@
         </ion-button>
       </ion-buttons>
     </ion-col>
-    <swiper-container slides-per-view="3" [loop]="true" class="swiper-container">
-      <swiper-slide *ngFor="let album of entry.albums" tappable (click)="openAlbum()"> 
+    <swiper-container slides-per-view="3" [loop]="true" free-mode="true">
+      <swiper-slide *ngFor="let album of entry.albums" tappable (click)="openAlbum(album)"> 
           <img class="albumImg" [src]="'/assets/images/albums/' + dasherize(album.image) + '.jpg'">
+          <span class="title"> {{ album.title }} </span>
       </swiper-slide>
     </swiper-container>
   </ion-row>
