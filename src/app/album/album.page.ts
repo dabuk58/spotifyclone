@@ -26,4 +26,10 @@ export class AlbumPage implements OnInit {
       console.log(album);
     }
   }
+
+  dasherize(x: string){
+    return x.replace(/[A-Z]/g, (char, index) => {
+      return (index !== 0 ? '-' : '') + char.toLowerCase();
+    })
+  }
 }
