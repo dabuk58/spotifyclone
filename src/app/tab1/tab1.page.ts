@@ -10,9 +10,10 @@ import jumpBackIn from '../../assets/mockdata/jumpBackIn.json';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page{
 
   constructor() {}
+
 
   data = [
     {
@@ -29,4 +30,13 @@ export class Tab1Page {
     }
   ];
 
+  openAlbum(album: any){
+    
+  }
+
+  dasherize(x: string){
+    return x.replace(/[A-Z]/g, (char, index) => {
+      return (index !== 0 ? '-' : '') + char.toLowerCase();
+    })
+  }
 }
